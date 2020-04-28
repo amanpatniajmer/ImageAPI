@@ -1,4 +1,4 @@
-# ImageAPI
+# ImageURL
 Dynamic message from server is processed to extract a image URL & Babel implementation for IE.
 
 Fetched a image url from here (https://dog.ceo/api/breeds/image/random) using AJAX.
