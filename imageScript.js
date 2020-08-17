@@ -10,11 +10,14 @@ xhttp.onreadystatechange = function () {
 xhttp.open("GET", "https://dog.ceo/api/breeds/image/random", true), xhttp.send();
 
 function display(s) {
-  var pos = s.indexOf("http");
-  var pos1 = s.indexOf(".jpg");
-  pos1 = pos1 + 3;
-  link += s.slice(pos, pos1 + 1);
+  //var pos = s.indexOf("http");
+  //var pos1 = s.indexOf(".jpg");
+  var a=JSON.parse(s);
+  var link=a.message;
+  //pos1 = pos1 + 3;
+  //link += s.slice(pos, pos1 + 1);
   link = link.replace(/\\/gi, "");
   document.getElementById("img1").src = link;
   console.log(link);
+  document.getElementById("p1").innerHTML=link;
 }
