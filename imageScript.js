@@ -16,7 +16,8 @@ function display(s) {
   var link=a.message;
   //pos1 = pos1 + 3;
   //link += s.slice(pos, pos1 + 1);
-  link = link.replace(/\\/gi, "");
+  //link = link.replace(/\\/gi, "");
+  link=decodeURIComponent(link);
   document.getElementById("img1").src = link;
   console.log(link);
   document.getElementById("p1").innerHTML=link;
